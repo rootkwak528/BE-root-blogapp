@@ -62,7 +62,7 @@ exports.home = function(req, res) {
         res.render('home-dashboard')
     } else {
         // req.flash 를 하면, session에서 꺼내쓰고 session을 바로 삭제해준다
-        res.render('home-guest', {errors: req.flash('errors'), regErrors: req.flash('regErrors')})
+        res.render('home-guest', {regErrors: req.flash('regErrors')})
     }
 }
 
